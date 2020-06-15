@@ -8,7 +8,7 @@ jobs:
       VERSION: '2.9.1'
       VENDOR: 'redmi'
       CODENAME: 'begonia'
-      MAINTAINER: 'Flamefusion'
+      MAINTAINER: '@Flamefusion'
       BUILD_LUNCH: 'omni_begonia-eng'
       PB_OFFICIAL: 'true'
     working_directory: /home/builder/pitchblack
