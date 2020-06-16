@@ -11,9 +11,10 @@ jobs:
       MAINTAINER: '@Flamefusion'
       BUILD_LUNCH: 'omni_begonia-eng'
       PB_OFFICIAL: 'true'
+      CHANGELOG: |
+        " - Initial Build"
     working_directory: /home/builder/pitchblack
     steps:
-      - checkout
       - run:
           name: AIO Build
           command: |
