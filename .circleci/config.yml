@@ -5,14 +5,15 @@ jobs:
       - image: fr3akyphantom/droid-builder:latest
     environment:
       MANIFEST_BRANCH: 'android-9.0'
+      USE_SECRET_BOOTABLE: 'true'
       VERSION: '2.9.1'
       VENDOR: 'redmi'
       CODENAME: 'begonia'
       MAINTAINER: '@Flamefusion'
       BUILD_LUNCH: 'omni_begonia-eng'
-      PB_OFFICIAL: 'true'
+      TEST_BUILD: 'true'
       CHANGELOG: |
-        " - Initial Build"
+        " - Testing dislocation"
     working_directory: /home/builder/pitchblack
     steps:
       - run:
@@ -25,11 +26,11 @@ jobs:
             wget -q https://raw.githubusercontent.com/PitchBlackRecoveryProject/vendor_pb/pb/build.sh
             source build.sh
 workflows:
-  version: 2
+  version: 2.1
   build_and_test:
     jobs:
       - build:
           filters:
             branches:
-              only: android-9.0
+              only: test
           context: org-global
